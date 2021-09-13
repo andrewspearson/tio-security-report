@@ -9,17 +9,17 @@ With this tool you can identify all single factor ways into your tenable.io.
 tio-security-report.py is a dependency free, standalone Python program. Just download it and run it.
 ### git
 ```
-$ git clone https://github.com/andrewspearson/tio-security-report.git
+git clone https://github.com/andrewspearson/tio-security-report.git
 ```
 ### curl
 ```
-$ curl https://raw.githubusercontent.com/andrewspearson/tio-security-report/main/tio-security-report.py -O
+curl https://raw.githubusercontent.com/andrewspearson/tio-security-report/main/tio-security-report.py -O
 ```
 
 **NOTE:** macOS users running Python 3.6+ will need to [install certificates](https://bugs.python.org/issue28150).
 TLDR, run this command:
 ```
-$ /Applications/Python {version}/Install Certificates.command
+/Applications/Python {version}/Install Certificates.command
 ```
 This seems to only be an issue on macOS.
 ## Usage
