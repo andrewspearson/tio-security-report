@@ -93,7 +93,9 @@ report = []
 report_user = {}
 
 users = json.load(request('GET', '/users', headers))
-for user in users['users']:
+for count, user in enumerate(users['users']):
+    total_users = len(users['users'])
+    print('Evaluating user ' + str(count) + ' of ' + str(total_users), end='\r', flush=True)
     details = json.load(request('GET', '/users/' + str(user['id']), headers))
     authorizations = json.load(request('GET', '/users/' + str(user['id']) + '/authorizations', headers))
     if session['container_type'] == 'mssp':
