@@ -4,7 +4,7 @@ tio-security-report.py reports the security configuration of all user accounts o
 With this tool you can identify all single factor ways into your tenable.io.
 
 ## Requirements
-* Python3
+* Python 3.3 or later
 ## Installation
 tio-security-report.py is a dependency free, standalone Python program. Just download it and run it.
 ### git
