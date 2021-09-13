@@ -33,5 +33,8 @@ $ tio-security-report.py --proxy '127.0.0.1:8080' --insecure
 ```
 These arguments are not required. Disabling SSL verification is HIGHLY discouraged.
 
-## Output
 A CSV report will be created in the working directory.
+
+## Example
+![](https://raw.githubusercontent.com/andrewspearson/file-server/main/repositories/tio-security-report/tio-security-report.gif)
+![](https://raw.githubusercontent.com/andrewspearson/file-server/main/repositories/tio-security-report/tio-security-report.png)
