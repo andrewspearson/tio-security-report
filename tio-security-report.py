@@ -132,6 +132,7 @@ for count, user in enumerate(users['users']):
         report_user['enabled'] and
         report_user['permissions'] >= 32 and
         report_user['mssp_accounts'] > 0 and
+        report_user['password_permitted'] and
         not report_user['two_factor_enabled']):
         report_user['notes'] = 'CRITICAL: This is a powerful account with weak authentication'
     else:
