@@ -36,5 +36,8 @@ These arguments are not required. Disabling SSL verification is HIGHLY discourag
 A CSV report will be created in the working directory.
 
 ## Example
+Example download and usage:
 ![](https://raw.githubusercontent.com/andrewspearson/file-server/main/repositories/tio-security-report/tio-security-report.gif)
+
+Example output:
 ![](https://raw.githubusercontent.com/andrewspearson/file-server/main/repositories/tio-security-report/tio-security-report.png)
