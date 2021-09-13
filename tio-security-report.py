@@ -99,7 +99,10 @@ for count, user in enumerate(users['users']):
     details = json.load(request('GET', '/users/' + str(user['id']), headers))
     authorizations = json.load(request('GET', '/users/' + str(user['id']) + '/authorizations', headers))
     if session['container_type'] == 'mssp':
-        mssp_accounts = json.load(request('GET', '/mssp/accounts/childContainers/' + user['uuid'], headers))
+        if user['permissions'] == 64:
+            mssp_accounts = json.load(request('GET', '/mssp/accounts', headers))['accounts']
+        else:
+            mssp_accounts = json.load(request('GET', '/mssp/accounts/childContainers/' + user['uuid'], headers))
     else:
         mssp_accounts = None
 
