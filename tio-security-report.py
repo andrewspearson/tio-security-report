@@ -68,7 +68,8 @@ else:
         proxy=proxy,
         verify=verify
     )
-    if 'two_factor' in json.load(response):
+    response = json.load(response)
+    if 'two_factor' in response:
         two_factor_token = getpass('Authentication code: ')
         response = request(
             method='POST',
@@ -81,7 +82,8 @@ else:
             proxy=proxy,
             verify=verify
         )
-    headers = {"x-cookie": "token=" + json.load(response)['token']}
+        response = json.load(response)
+    headers = {"x-cookie": "token=" + response['token']}
 
 session = json.load(request('GET', '/session', headers))
 if session['permissions'] != 64:
